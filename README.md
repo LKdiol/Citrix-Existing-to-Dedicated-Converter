@@ -36,7 +36,7 @@ Citrix Existing 및 Dedicated 카탈로그 변환기
 ![image](https://github.com/LKdiol/Citrix-Existing-to-Dedicated-Converter/assets/126259075/9ee4e10f-7d2f-4203-bc51-a375878e22a1)
 
 
-# 1. Converting 과정
+# Converting 과정
 ## Catalog Name 입력
 과정: 변환 대상 Existing Catalog Name 입력 --> Dedicated Catalog Name 입력 --> Existing 및 Dedicated 카탈로그 입력 중 잘못 된 형식의 카탈로그 지정 시 다음 과정으로 진행 불가 --> 
  예시)
@@ -49,5 +49,16 @@ Citrix Existing 및 Dedicated 카탈로그 변환기
 ## 잘못된 카탈로그 값 입력 시 오류 상황
 ![image](https://github.com/LKdiol/Citrix-Existing-to-Dedicated-Converter/assets/126259075/2a711bed-ec67-40b8-b209-eb504369ed9b)
 
+## 변환 완료
+<img width="1040" alt="image" src="https://github.com/LKdiol/Citrix-Existing-to-Dedicated-Converter/assets/126259075/d8365c68-b8af-4744-806a-bc7c88442499">
+
+## 변환 완료 후 MCS VM 생성 테스트
+이전에 VM-User01에서 VM-User03만 생성되었던 것을 카탈로그 변환 후에도 정상적으로 생성이 가능하게 되었습니다.
+![image](https://github.com/LKdiol/Citrix-Existing-to-Dedicated-Converter/assets/126259075/2654545e-6243-4383-9af2-a03af39a995c)
+![image](https://github.com/LKdiol/Citrix-Existing-to-Dedicated-Converter/assets/126259075/c3b7ac84-e37c-4e02-a569-cfb55286ce39)
+
+# 지원되지 않는 기능
+## 변환되기 전 Existing으로 생성된 VM 삭제 시 VM과 AD Computer OU를 삭제하거나 비활성화 하는 기능이 작동하지 않음
+![image](https://github.com/LKdiol/Citrix-Existing-to-Dedicated-Converter/assets/126259075/ea6d8486-56cf-4504-8466-7be2eb5dbc02)
 
 
