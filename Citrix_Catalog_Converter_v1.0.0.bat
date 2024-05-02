@@ -3,15 +3,15 @@ setlocal enabledelayedexpansion
 del "%TMP%\*.sql" "%TMP%\*.log" >nul 2>&1
 set seldb=vm
 echo Citrix Existing to Dedicated Converter v1.0
-echo ¹öÀüÀÏÀÚ 2024-05-02
+echo ë²„ì „ì¼ì 2024-05-02
 title Citrix Existing to Dedicated Converter v1.0
 set location=%~dp0
 cd %location%
-:: ÀÎÁõ¹æ½Ä 0ÀÌ¸é ADµµ¸ŞÀÎ ÀÎÁõ, 1ÀÌ¸é SQL Server ÀÎÁõ
+:: ì¸ì¦ë°©ì‹ 0ì´ë©´ ADë„ë©”ì¸ ì¸ì¦, 1ì´ë©´ SQL Server ì¸ì¦
 set salist=0
 
 
-:: bin Æú´õ À¯¹«
+:: bin í´ë” ìœ ë¬´
 IF EXIST bin (
 goto mvcconfig
 ) ELSE (
@@ -20,13 +20,13 @@ goto mvcconfig
 
 :notbin
 echo.
-echo bin Æú´õ°¡ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù. 
-echo ½ÇÇàµÈ °æ·Î¿¡¼­ binÆú´õ ºüÁöÁö ¾Ê¾Ò´ÂÁö ´Ù½ÃÇÑ¹ø È®ÀÎÇØÁÖ¼¼¿ä. 
+echo bin í´ë”ê°€ ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤. 
+echo ì‹¤í–‰ëœ ê²½ë¡œì—ì„œ biní´ë” ë¹ ì§€ì§€ ì•Šì•˜ëŠ”ì§€ ë‹¤ì‹œí•œë²ˆ í™•ì¸í•´ì£¼ì„¸ìš”. 
 pause 
 exit
 
 :mvcconfig
-:: config ÆÄÀÏ À¯¹«
+:: config íŒŒì¼ ìœ ë¬´
 IF EXIST config.conf (
 goto confdb
 ) ELSE (
@@ -38,44 +38,44 @@ goto confdb
 :input
 cls
 set dbport=1433
-echo Citrix Existing to Dedicated Converter ÃÊ±â±¸¼º Config ±¸¼º 
-echo ±¸¼º ¿Ï·á ½Ã Citrix_Catalog_Converter.bat °æ·Î¿¡ Config.conf ÆÄÀÏ »ı¼º
+echo Citrix Existing to Dedicated Converter ì´ˆê¸°êµ¬ì„± Config êµ¬ì„± 
+echo êµ¬ì„± ì™„ë£Œ ì‹œ Citrix_Catalog_Converter.bat ê²½ë¡œì— Config.conf íŒŒì¼ ìƒì„±
 echo.
-:: config ¼³Á¤ ------
+:: config ì„¤ì • ------
 
-:: DB¼­¹ö IP or µµ¸ŞÀÎ ¼³Á¤
-echo 1.DB¼­¹ö IP ÀÔ·Â
-set /p userDBip=ÀÔ·Â:
+:: DBì„œë²„ IP or ë„ë©”ì¸ ì„¤ì •
+echo 1.DBì„œë²„ IP ì…ë ¥
+set /p userDBip=ì…ë ¥:
 echo.
-:: DB¼­¹ö Æ÷Æ® ¼³Á¤
-echo 2.DB¼­¹öPort ÀÔ·Â
-echo ÀÔ·Â¾ÈÇÏ°í ³Ñ¾î°¥ ½Ã ±âº» 1433Æ÷Æ®·Î ÀÚµ¿ ÀÔ·Â
-set /p dbport=ÀÔ·Â:
+:: DBì„œë²„ í¬íŠ¸ ì„¤ì •
+echo 2.DBì„œë²„Port ì…ë ¥
+echo ì…ë ¥ì•ˆí•˜ê³  ë„˜ì–´ê°ˆ ì‹œ ê¸°ë³¸ 1433í¬íŠ¸ë¡œ ìë™ ì…ë ¥
+set /p dbport=ì…ë ¥:
 echo.
-echo 3. CVAD Site DB ¼³Á¤
-set /p userDB=ÀÔ·Â:
+echo 3. CVAD Site DB ì„¤ì •
+set /p userDB=ì…ë ¥:
 goto input1
 :derr
-echo ¹üÀ§¸¦ ¹ş¾î³­ ÀÔ·ÂÀÔ´Ï´Ù.
-echo Àß¸øµÈ °ªÀ¸·Î Ã³À½ È­¸éÀ¸·Î ´Ù½Ã µ¹¾Æ°©´Ï´Ù.
+echo ë²”ìœ„ë¥¼ ë²—ì–´ë‚œ ì…ë ¥ì…ë‹ˆë‹¤.
+echo ì˜ëª»ëœ ê°’ìœ¼ë¡œ ì²˜ìŒ í™”ë©´ìœ¼ë¡œ ë‹¤ì‹œ ëŒì•„ê°‘ë‹ˆë‹¤.
 pause
 goto main
 
 :input1
 cls
 set seldb=vm
-echo ## DBÁ¢¼ÓÁ¤º¸ ¼³Á¤ ¸Ş´º
+echo ## DBì ‘ì†ì •ë³´ ì„¤ì • ë©”ë‰´
 echo.
-echo 1) DB ÀÎÁõÀ» ADµµ¸ŞÀÎ ¹× SQL Server ÀÎÁõÀ» ¼±ÅÃ ÇÒ ¼ö ÀÖ½À´Ï´Ù.
-echo   -- µµ¸ŞÀÎ Á¶ÀÎÀÌ ¾Æ´Ñ È£½ºÆ®¿¡¼­´Â ADµµ¸ŞÀÎ ÀÎÁõÀ» ÇØµµ ÀÚµ¿À¸·Î SQL Server ÀÎÁõÀ¸·Î ¼³Á¤
-echo 2) Citrix Controller¿¡ ¼³Á¤ µÈ Site DB¸í ÀÔ·Â
+echo 1) DB ì¸ì¦ì„ ADë„ë©”ì¸ ë° SQL Server ì¸ì¦ì„ ì„ íƒ í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.
+echo   -- ë„ë©”ì¸ ì¡°ì¸ì´ ì•„ë‹Œ í˜¸ìŠ¤íŠ¸ì—ì„œëŠ” ADë„ë©”ì¸ ì¸ì¦ì„ í•´ë„ ìë™ìœ¼ë¡œ SQL Server ì¸ì¦ìœ¼ë¡œ ì„¤ì •
+echo 2) Citrix Controllerì— ì„¤ì • ëœ Site DBëª… ì…ë ¥
 echo.
-echo 1.ADµµ¸ŞÀÎÀÎÁõ
-echo 2.SQL Server ÀÎÁõ
+echo 1.ADë„ë©”ì¸ì¸ì¦
+echo 2.SQL Server ì¸ì¦
 echo.
-echo x. ³ª°¡±â  
+echo x. ë‚˜ê°€ê¸°  
 echo.
-set /p seldb=DB ÀÎÁõ¹æ½Ä ¼±ÅÃ:
+set /p seldb=DB ì¸ì¦ë°©ì‹ ì„ íƒ:
 if %seldb%==vm goto derr
 if %seldb%==x exit
 if %seldb%==X exit
@@ -84,8 +84,8 @@ if %seldb%==2 goto selc1
 
 :join
 set salist=0
-:: µµ¸ŞÀÎ Á¶ÀÎ ¿©ºÎ 
-:: ·ÎÄÃ È£½ºÆ®¿¡¼­ µµ¸ŞÀÎ Á¶ÀÎ»óÅÂ¿¡ µû¶ó DBÁ¶ÀÎ ¼öµ¿ÀÔ·ÂÀ¸·Î ÀÚµ¿ ÀüÈ¯
+:: ë„ë©”ì¸ ì¡°ì¸ ì—¬ë¶€ 
+:: ë¡œì»¬ í˜¸ìŠ¤íŠ¸ì—ì„œ ë„ë©”ì¸ ì¡°ì¸ìƒíƒœì— ë”°ë¼ DBì¡°ì¸ ìˆ˜ë™ì…ë ¥ìœ¼ë¡œ ìë™ ì „í™˜
 if %computername%==%userdomain% goto selc1
 goto input3
 
@@ -128,11 +128,11 @@ set dedalloty=n
 set dedproty=n
 del "%TMP%\sapass.txt"
 cls
-echo ## Catalog Name ÀÔ·Â
+echo ## Catalog Name ì…ë ¥
 echo.
-echo ÀÔ·Â ¼ø¼­ : Exsting Catalog Name ÀÔ·Â ÈÄ Dedicated Catalog Name ¼øÀ¸·Î ÀÔ·ÂÇÕ´Ï´Ù.
+echo ì…ë ¥ ìˆœì„œ : Exsting Catalog Name ì…ë ¥ í›„ Dedicated Catalog Name ìˆœìœ¼ë¡œ ì…ë ¥í•©ë‹ˆë‹¤.
 echo.
-set /p existname=Existing Catalog Name ÀÔ·Â:
+set /p existname=Existing Catalog Name ì…ë ¥:
 echo.
 
 if %salist%==0 goto extype1
@@ -155,14 +155,17 @@ goto DediName
 
 :ewarmsg
 echo.
-echo ÀÔ·ÂÇÏ½Å Ä«Å»·Î±×°¡ Existing Ä«Å»·Î±×°¡ ¾Æ´Ñ°ÍÀ¸·Î º¸ÀÔ´Ï´Ù.
-echo Àç ÀÔ·ÂÀ» À§ÇØ ¾Æ¹« Å°³ª ´©¸£½Ê½Ã¿À
+echo ì…ë ¥í•˜ì‹  ì¹´íƒˆë¡œê·¸ê°€ Existing ì¹´íƒˆë¡œê·¸ê°€ ì•„ë‹Œê²ƒìœ¼ë¡œ ë³´ì…ë‹ˆë‹¤.
+echo ì¬ ì…ë ¥ì„ ìœ„í•´ ì•„ë¬´ í‚¤ë‚˜ ëˆ„ë¥´ì‹­ì‹œì˜¤
 pause > nul
 goto main
 
 :DediName
-set /p mcsname=Dedicated Catalog Name ÀÔ·Â:
+set /p mcsname=Dedicated Catalog Name ì…ë ¥:
 echo.
+
+if %salist%==0 goto detype1
+goto detype2
 
 :detype1
 for /f "tokens=1" %%i in ('sqlcmd -S %userDBip%^,%dbport% -E -W -h -1 -Q "set nocount on; SELECT [AllocationType] FROM [%userDB%].[chb_Config].[Catalogs] where DisplayName='%mcsname%'"') do set dedalloty=%%i
@@ -181,8 +184,8 @@ goto StartConvert
 
 :dwarmsg
 echo.
-echo ÀÔ·ÂÇÏ½Å Ä«Å»·Î±×°¡ Dedicated Ä«Å»·Î±×°¡ ¾Æ´Ñ°ÍÀ¸·Î º¸ÀÔ´Ï´Ù.
-echo Àç ÀÔ·ÂÀ» À§ÇØ ¾Æ¹« Å°³ª ´©¸£½Ê½Ã¿À
+echo ì…ë ¥í•˜ì‹  ì¹´íƒˆë¡œê·¸ê°€ Dedicated ì¹´íƒˆë¡œê·¸ê°€ ì•„ë‹Œê²ƒìœ¼ë¡œ ë³´ì…ë‹ˆë‹¤.
+echo ì¬ ì…ë ¥ì„ ìœ„í•´ ì•„ë¬´ í‚¤ë‚˜ ëˆ„ë¥´ì‹­ì‹œì˜¤
 pause > nul
 goto main
 
@@ -217,8 +220,8 @@ if %salist%==0 sqlcmd -E -S %userDBip%,%dbport% -i "%TMP%\converter.sql"
 if %salist%==1 sqlcmd -S %userDBip%,%dbport% -U %sauser% -P !sapass! -i "%TMP%\converter.sql"
 
 echo.
-echo Citrix CVAD Machine Catalog º¯È¯ÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.
-echo ¾Æ¹« Å°³ª ´©¸£°Å³ª 'X' ¹öÆ°À» Å¬¸¯ÇÏ¿© ´İÀ¸½Ã¸é µË´Ï´Ù.
+echo Citrix CVAD Machine Catalog ë³€í™˜ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.
+echo ì•„ë¬´ í‚¤ë‚˜ ëˆ„ë¥´ê±°ë‚˜ 'X' ë²„íŠ¼ì„ í´ë¦­í•˜ì—¬ ë‹«ìœ¼ì‹œë©´ ë©ë‹ˆë‹¤.
 pause >nul 2>&1
 del "%TMP%\*.sql" >nul 2>&1
 exit
@@ -228,19 +231,19 @@ exit
 set salist=1
 set sauser=sa
 cls
-echo # SQL Server ÀÎÁõ¹æ½Ä ¼³Á¤
+echo # SQL Server ì¸ì¦ë°©ì‹ ì„¤ì •
 echo.
-echo 1.DB user ÀÔ·Â 
-echo ÀÔ·Â¾ÈÇÏ°í ³Ñ¾î°¥ ½Ã sa°èÁ¤À¸·Î ÀÚµ¿ ÀÔ·Â
-set /p sauser=ÀÔ·Â:
+echo 1.DB user ì…ë ¥ 
+echo ì…ë ¥ì•ˆí•˜ê³  ë„˜ì–´ê°ˆ ì‹œ saê³„ì •ìœ¼ë¡œ ìë™ ì…ë ¥
+set /p sauser=ì…ë ¥:
 echo.
-echo 2.DB %sauser% °èÁ¤ ÆĞ½º¿öµå ÀÔ·Â
-call :mssqlPass usersapass "ÀÔ·Â: "
+echo 2.DB %sauser% ê³„ì • íŒ¨ìŠ¤ì›Œë“œ ì…ë ¥
+call :mssqlPass usersapass "ì…ë ¥: "
 echo.
 
 :mssqlPass
 SetLocal DisableDelayedExpansion
-echo ÀÔ·Â:
+echo ì…ë ¥:
 Set "Line="
 For /F %%# In ('"Prompt;$H&For %%# in (1) Do Rem"') Do Set "BS=%%#"
 
@@ -263,7 +266,7 @@ goto :PassLoop
 
 
 :PassEnd
-::¾ÏÈ£È­
+::ì•”í˜¸í™”
 echo(
 for /f "tokens=1" %%i in ('echo !Line! ^|bin\openssl.exe enc -e -aes256 -a -k %COMPUTERNAME%') do set passenc=%%i
 goto dbpassenc
