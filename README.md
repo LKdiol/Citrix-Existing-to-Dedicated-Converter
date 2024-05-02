@@ -33,4 +33,21 @@ Citrix Existing 및 Dedicated 카탈로그 변환기
 
 ![image](https://github.com/LKdiol/Citrix-Existing-to-Dedicated-Converter/assets/126259075/8f8d56bd-0d4c-4ecb-be24-aec7148558ee)
 
+![image](https://github.com/LKdiol/Citrix-Existing-to-Dedicated-Converter/assets/126259075/9ee4e10f-7d2f-4203-bc51-a375878e22a1)
+
+
+# 1. Converting 과정
+## Catalog Name 입력
+과정: 변환 대상 Existing Catalog Name 입력 --> Dedicated Catalog Name 입력 --> Existing 및 Dedicated 카탈로그 입력 중 잘못 된 형식의 카탈로그 지정 시 다음 과정으로 진행 불가 --> 
+ 예시)
+- Existing Catalog: Win10-MCS
+- Dedicated Catalog: Win10-EX
+![image](https://github.com/LKdiol/Citrix-Existing-to-Dedicated-Converter/assets/126259075/23ec5f1f-bf31-4870-acd9-0e12f08d8923)
+![image](https://github.com/LKdiol/Citrix-Existing-to-Dedicated-Converter/assets/126259075/4c3fb447-b41e-458a-a14d-266f749b6b90)
+
+
+## 잘못된 카탈로그 값 입력 시 오류 상황
+![image](https://github.com/LKdiol/Citrix-Existing-to-Dedicated-Converter/assets/126259075/2a711bed-ec67-40b8-b209-eb504369ed9b)
+
+
 
