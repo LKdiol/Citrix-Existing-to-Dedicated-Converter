@@ -27,7 +27,7 @@ Citrix Existing 및 Dedicated 카탈로그 변환기
 
 ![image](https://github.com/LKdiol/Citrix-Existing-to-Dedicated-Converter/assets/126259075/132ed746-5130-44a6-b1a1-8ede49c59ee0)
 
-![image](https://github.com/LKdiol/Citrix-Existing-to-Dedicated-Converter/assets/126259075/6810a356-5fe7-4849-998d-00ae583f44a1)
+![image](https://github.com/LKdiol/Citrix-Existing-to-Dedicated-Converter/assets/126259075/8ff052dd-84d9-4531-a9d2-d16176ca7ca9)
 
 ![image](https://github.com/LKdiol/Citrix-Existing-to-Dedicated-Converter/assets/126259075/34ae9acd-21c6-4515-8894-c29af275127e)
 
