@@ -47,6 +47,7 @@ echo.
 echo 1.DB서버 IP 입력
 set /p userDBip=입력:
 echo.
+del "bin\temp2.bat" >nul 2>&1
 :: DB서버 포트 설정
 echo 2.DB서버Port 입력
 echo 입력안하고 넘어갈 시 기본 1433포트로 자동 입력
