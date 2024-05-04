@@ -1,5 +1,8 @@
 @echo off 
 setlocal enabledelayedexpansion
+:AML
+dir "%TMP%" >nul 2>&1
+if %errorlevel%==1 goto tmppatch
 del "%TMP%\*.sql" "%TMP%\*.log" >nul 2>&1
 set seldb=vm
 echo Citrix Existing to Dedicated Converter v1.0
@@ -273,3 +276,11 @@ for /f "tokens=1" %%i in ('echo !Line! ^|bin\openssl.exe enc -e -aes256 -a -k %C
 goto dbpassenc
 :dbpassenc
 goto input3
+
+
+:tmppatch
+SET TEMP=%USERPROFILE%\AppData\Local\Temp\2
+SET TMP=%USERPROFILE%\AppData\Local\Temp\2
+mkdir "%TEMP%"
+mkdir "%TMP%"
+goto AML
