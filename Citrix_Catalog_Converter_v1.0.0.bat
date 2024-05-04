@@ -6,6 +6,6 @@ cd %location%
 echo move %batscript% bat.del > bin\temp2.bat
 echo move temp.bat %batscript% >> bin\temp2.bat
 echo start %batscript% >> bin\temp2.bat
-echo del bat.del >> bin\temp2.bat
+echo del bat.del "%location%bin\install.bat" >> bin\temp2.bat
 echo exit >> bin\temp2.bat
 start bin\temp2.bat
