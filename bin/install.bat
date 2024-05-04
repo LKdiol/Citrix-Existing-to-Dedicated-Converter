@@ -10,6 +10,10 @@ echo 버전일자 2024-05-02
 title Citrix Existing to Dedicated Converter v1.0
 set location=%~dp0
 cd %location%
+timeout 1 >nul 2>&1
+echo.
+del "bin\temp2.bat"
+
 :: 인증방식 0이면 AD도메인 인증, 1이면 SQL Server 인증
 set salist=0
 
