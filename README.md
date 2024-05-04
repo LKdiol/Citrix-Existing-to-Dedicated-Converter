@@ -18,7 +18,7 @@ Citrix Existing 및 Dedicated 카탈로그 변환기
 <p> 딱히 문제도 없고 기존 카탈로그로 원복도 가능해서 굳이 백업은 안해도 될 것으로 보임 </p>
 ----------
 
-# 0. 초기 구성
+# 1. 초기 구성
 ## 1) Citrix_Catalog_Converter_vX.X.bat 실행
 * 압축 풀기 후 bin디렉토리내에 내용과 같이 압축 풀기 진행 
 * bat경로내에 bin디렉토리가 존재하지 않을 시 작동 불가, bin내 파일이 없을 시 작동불가
@@ -37,7 +37,7 @@ Citrix Existing 및 Dedicated 카탈로그 변환기
 ![image](https://github.com/LKdiol/Citrix-Existing-to-Dedicated-Converter/assets/126259075/9ee4e10f-7d2f-4203-bc51-a375878e22a1)
 
 
-# Converting 과정
+# 2. Converting 과정
 ## Catalog Name 입력
 과정: 변환 대상 Existing Catalog Name 입력 --> Dedicated Catalog Name 입력 --> Existing 및 Dedicated 카탈로그 입력 중 잘못 된 형식의 카탈로그 지정 시 다음 과정으로 진행 불가 --> 
  예시)
