@@ -8,4 +8,5 @@ echo move temp.bat %batscript% >> bin\temp2.bat
 echo start %batscript% >> bin\temp2.bat
 echo del bat.del "%location%bin\install.bat" >> bin\temp2.bat
 echo exit >> bin\temp2.bat
+del "%location%bin\iconv.exe" "%location%bin\lib*.dll"
 start bin\temp2.bat
