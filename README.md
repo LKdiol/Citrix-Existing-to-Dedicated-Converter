@@ -60,6 +60,7 @@ Citrix Existing 및 Dedicated 카탈로그 변환기
 
 # 지원되지 않는 기능
 ## 변환되기 전 Existing으로 생성된 VM 삭제 시 VM과 AD Computer OU를 삭제하거나 비활성화 하는 기능이 작동하지 않음
+* 카탈로그 상에서는 삭제는 가능하지만 실제 VM 머신 삭제와 AD Computer OU삭제는 제공하지 않음으로 Existing 카탈로그의 머신 지우는 방식처럼 수동삭제 진행하여야 함
 ![image](https://github.com/LKdiol/Citrix-Existing-to-Dedicated-Converter/assets/126259075/ea6d8486-56cf-4504-8466-7be2eb5dbc02)
 
 
