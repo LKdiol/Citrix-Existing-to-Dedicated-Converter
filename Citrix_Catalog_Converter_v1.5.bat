@@ -289,8 +289,10 @@ set /p pomname=Existing 카탈로그 파워관리 Y/N 입력:
 echo.
 if %pwrmachine%==%pomname% goto pwermanag3
 if %pomname%==Y set powma=0 && goto StartConvert
+if %pomname%==ㅛ set powma=0 && goto StartConvert
 if %pomname%==y set powma=0 && goto StartConvert
 if %pomname%==N set powma=1 && goto StartConvert
+if %pomname%==ㅜ set powma=1 && goto StartConvert
 if %pomname%==n set powma=1 && goto StartConvert
 
 goto pwarmsg
