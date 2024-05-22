@@ -2,7 +2,8 @@
 Citrix Existing 및 Dedicated 카탈로그 변환기
 
 ## 실행화면
-![image](https://github.com/LKdiol/Citrix-Existing-to-Dedicated-Converter/assets/126259075/f216f623-94ed-4321-882a-3b48ffec15be)
+![image](https://github.com/LKdiol/Citrix-Existing-to-Dedicated-Converter/assets/126259075/70eba1a5-8823-40bf-b5bf-c77f42088d08)
+
 
 # 개요
 
