@@ -20,7 +20,7 @@ Citrix Existing 및 Dedicated 카탈로그 변환기
 <p> 딱히 문제도 없고 기존 카탈로그로 원복도 가능해서 굳이 백업은 안해도 될 것으로 판단 됨 </p>
 ----------
 
-## v1.5 버전 Update 변경사항
+# v1.5 버전 Update 변경사항
 * Dedicated,Existing 카탈로그 리스트 Viewer 기능 추가
 * 입력 시 카탈로그 이름이 아닌 카탈로그 번호로 입력하는 기능으로 변경
 * Existing 카탈로그 변환 시 Power Managed 옵션 설정 추가
