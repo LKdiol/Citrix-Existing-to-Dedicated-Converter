@@ -436,3 +436,10 @@ echo Copyright 2024 ⓒ Leedk. All rights reserved.
 echo.
 pause
 goto main
+
+:: Update 변경사항
+:: Dedicated,Existing 카탈로그 리스트 Viewer 기능 추가
+:: 입력 시 카탈로그 이름이 아닌 카탈로그 번호로 입력하는 기능으로 변경
+:: Existing 카탈로그 변환 시 Power Managed 옵션 설정 추가
+:: IdentityPool 네임 및 ProvScheme 네임 카탈로그 전환 시 변경된 네임으로 따라가도록 설정
+
